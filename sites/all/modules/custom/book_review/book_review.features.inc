@@ -21,7 +21,7 @@ function book_review_node_info() {
     'book_review' => array(
       'name' => t('Book Review'),
       'base' => 'node_content',
-      'description' => t('for reviewing Books '),
+      'description' => t('This field is to be used for a review of a specific book. It is available to the admin, and to users designated as reviewers.'),
       'has_title' => '1',
       'title_label' => t('Book Title'),
       'help' => '',

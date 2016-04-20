@@ -21,7 +21,7 @@ function music_review_node_info() {
     'music_review' => array(
       'name' => t('Music Review'),
       'base' => 'node_content',
-      'description' => t('for reviewing Music'),
+      'description' => t('Admin and designated Reviewer Users can write reviews of audio'),
       'has_title' => '1',
       'title_label' => t('Music Review'),
       'help' => '',

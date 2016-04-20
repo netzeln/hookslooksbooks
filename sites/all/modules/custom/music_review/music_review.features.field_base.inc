@@ -74,6 +74,25 @@ function music_review_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_music_review_text'.
+  $field_bases['field_music_review_text'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_music_review_text',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_with_summary',
+  );
+
   // Exported field_base: 'field_release_year'.
   $field_bases['field_release_year'] = array(
     'active' => 1,

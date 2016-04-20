@@ -10,51 +10,6 @@
 function music_review_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-music_review-body'.
-  $field_instances['node-music_review-body'] = array(
-    'bundle' => 'music_review',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Music Review Text',
-    'required' => 0,
-    'settings' => array(
-      'display_summary' => 1,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 5,
-    ),
-  );
-
   // Exported field_instance: 'node-music_review-field_album_cover'.
   $field_instances['node-music_review-field_album_cover'] = array(
     'bundle' => 'music_review',
@@ -185,6 +140,48 @@ function music_review_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-music_review-field_music_review_text'.
+  $field_instances['node-music_review-field_music_review_text'] = array(
+    'bundle' => 'music_review',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Review a CD or Single.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_music_review_text',
+    'label' => 'Music Review Text',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-music_review-field_release_year'.
   $field_instances['node-music_review-field_release_year'] = array(
     'bundle' => 'music_review',
@@ -292,6 +289,7 @@ function music_review_field_default_field_instances() {
   t('Artist');
   t('Music Review Text');
   t('Musical Work');
+  t('Review a CD or Single.');
   t('Tags');
   t('album cover');
   t('an album cover or other image');

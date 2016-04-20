@@ -10,51 +10,6 @@
 function book_review_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-book_review-body'.
-  $field_instances['node-book_review-body'] = array(
-    'bundle' => 'book_review',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Review Text',
-    'required' => 0,
-    'settings' => array(
-      'display_summary' => 1,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 4,
-    ),
-  );
-
   // Exported field_instance: 'node-book_review-field_author'.
   $field_instances['node-book_review-field_author'] = array(
     'bundle' => 'book_review',
@@ -92,6 +47,48 @@ function book_review_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-book_review-field_book_review_text'.
+  $field_instances['node-book_review-field_book_review_text'] = array(
+    'bundle' => 'book_review',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_book_review_text',
+    'label' => 'Book Review Text',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 7,
     ),
   );
 
@@ -291,10 +288,10 @@ function book_review_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('4 digit year');
   t('Author');
+  t('Book Review Text');
   t('Cover');
   t('Publication Date');
   t('Publisher');
-  t('Review Text');
   t('Tags');
 
   return $field_instances;

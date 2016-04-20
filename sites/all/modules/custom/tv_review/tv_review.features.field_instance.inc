@@ -10,51 +10,6 @@
 function tv_review_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-tv_review-body'.
-  $field_instances['node-tv_review-body'] = array(
-    'bundle' => 'tv_review',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'TV Review Text',
-    'required' => 0,
-    'settings' => array(
-      'display_summary' => 1,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 5,
-    ),
-  );
-
   // Exported field_instance: 'node-tv_review-field_episode'.
   $field_instances['node-tv_review-field_episode'] = array(
     'bundle' => 'tv_review',
@@ -287,12 +242,55 @@ function tv_review_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-tv_review-field_tv_review_text'.
+  $field_instances['node-tv_review-field_tv_review_text'] = array(
+    'bundle' => 'tv_review',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Review an Episode of TV',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tv_review_text',
+    'label' => 'TV Review Text',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 7,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('An Image to support the review if available');
   t('Episode');
   t('Episode #   in S##E## format : Title if there is one .');
   t('Original Airdate');
+  t('Review an Episode of TV');
   t('Series');
   t('TV Image');
   t('TV Review Text');
