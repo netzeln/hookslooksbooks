@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TV Review feature.
+ */
+
+include_once 'tv_review.features.inc';

@@ -1,68 +1,68 @@
 <?php
 /**
  * @file
- * book_review.strongarm.inc
+ * tv_review.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function book_review_strongarm() {
+function tv_review_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_book_review';
+  $strongarm->name = 'comment_anonymous_tv_review';
   $strongarm->value = 0;
-  $export['comment_anonymous_book_review'] = $strongarm;
+  $export['comment_anonymous_tv_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_book_review';
-  $strongarm->value = '0';
-  $export['comment_book_review'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_book_review';
+  $strongarm->name = 'comment_default_mode_tv_review';
   $strongarm->value = 1;
-  $export['comment_default_mode_book_review'] = $strongarm;
+  $export['comment_default_mode_tv_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_book_review';
+  $strongarm->name = 'comment_default_per_page_tv_review';
   $strongarm->value = '10';
-  $export['comment_default_per_page_book_review'] = $strongarm;
+  $export['comment_default_per_page_tv_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_book_review';
+  $strongarm->name = 'comment_form_location_tv_review';
   $strongarm->value = 1;
-  $export['comment_form_location_book_review'] = $strongarm;
+  $export['comment_form_location_tv_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_book_review';
+  $strongarm->name = 'comment_preview_tv_review';
   $strongarm->value = '1';
-  $export['comment_preview_book_review'] = $strongarm;
+  $export['comment_preview_tv_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_book_review';
+  $strongarm->name = 'comment_subject_field_tv_review';
   $strongarm->value = 1;
-  $export['comment_subject_field_book_review'] = $strongarm;
+  $export['comment_subject_field_tv_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__book_review';
+  $strongarm->name = 'comment_tv_review';
+  $strongarm->value = '0';
+  $export['comment_tv_review'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__tv_review';
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
@@ -93,44 +93,44 @@ function book_review_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_node__book_review'] = $strongarm;
+  $export['field_bundle_settings_node__tv_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_book_review';
+  $strongarm->name = 'menu_options_tv_review';
   $strongarm->value = array();
-  $export['menu_options_book_review'] = $strongarm;
+  $export['menu_options_tv_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_book_review';
+  $strongarm->name = 'menu_parent_tv_review';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_book_review'] = $strongarm;
+  $export['menu_parent_tv_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_book_review';
+  $strongarm->name = 'node_options_tv_review';
   $strongarm->value = array(
     0 => 'status',
   );
-  $export['node_options_book_review'] = $strongarm;
+  $export['node_options_tv_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_book_review';
+  $strongarm->name = 'node_preview_tv_review';
   $strongarm->value = '1';
-  $export['node_preview_book_review'] = $strongarm;
+  $export['node_preview_tv_review'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_book_review';
+  $strongarm->name = 'node_submitted_tv_review';
   $strongarm->value = 1;
-  $export['node_submitted_book_review'] = $strongarm;
+  $export['node_submitted_tv_review'] = $strongarm;
 
   return $export;
 }
