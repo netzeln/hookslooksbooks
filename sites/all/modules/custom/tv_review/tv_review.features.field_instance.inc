@@ -105,6 +105,54 @@ function tv_review_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-tv_review-field_rating_tv'.
+  $field_instances['node-tv_review-field_rating_tv'] = array(
+    'bundle' => 'tv_review',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'fivestar',
+        'settings' => array(
+          'expose' => TRUE,
+          'style' => 'average',
+          'text' => 'none',
+          'widget' => array(
+            'fivestar_widget' => 'sites/all/modules/fivestar/widgets/small/small.css',
+          ),
+        ),
+        'type' => 'fivestar_formatter_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_rating_tv',
+    'label' => 'rating',
+    'required' => FALSE,
+    'settings' => array(
+      'stars' => 5,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'fivestar',
+      'settings' => array(
+        'widget' => array(
+          'fivestar_widget' => 'default',
+        ),
+      ),
+      'type' => 'stars',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-tv_review-field_series'.
   $field_instances['node-tv_review-field_series'] = array(
     'bundle' => 'tv_review',
@@ -297,6 +345,7 @@ function tv_review_field_default_field_instances() {
   t('Tags');
   t('name of the tv series');
   t('original air date of episode, if known');
+  t('rating');
 
   return $field_instances;
 }

@@ -39,18 +39,11 @@ function tv_review_views_default_views() {
   $handler->display->display_options['fields']['field_series']['label'] = '';
   $handler->display->display_options['fields']['field_series']['element_type'] = 'strong';
   $handler->display->display_options['fields']['field_series']['element_label_colon'] = FALSE;
-  /* Field: Content: Episode */
-  $handler->display->display_options['fields']['field_episode']['id'] = 'field_episode';
-  $handler->display->display_options['fields']['field_episode']['table'] = 'field_data_field_episode';
-  $handler->display->display_options['fields']['field_episode']['field'] = 'field_episode';
-  $handler->display->display_options['fields']['field_episode']['label'] = '';
-  $handler->display->display_options['fields']['field_episode']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';

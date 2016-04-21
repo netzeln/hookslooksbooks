@@ -30,7 +30,7 @@ function tv_review_node_info() {
       'base' => 'node_content',
       'description' => t('for reviewing tv show or episode'),
       'has_title' => '1',
-      'title_label' => t('TV Review'),
+      'title_label' => t('Episode'),
       'help' => '',
     ),
   );
